@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<!-- Ukraine - uk -->
+<!-- Мова не визначена - zxx -->
+<!-- Коди мов https://html-css.co.ua/html/lang-kodu-mov/ -->
+<html lang="en">
+	<head>
+		<!-- Кодування тексту -->
+		<meta charset="UTF-8">
+		<!-- Налаштування в'юпорту (адаптиву, масштабу тощо) -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Заголовок сторінки в браузері -->
+		<title>Lesson 02 - HomePage</title>
+	</head>
+	<body>
+		<!-- БЛОЧНІ, РДКОВІ та БЛОЧНО-РДКОВІ теги -->
+
+		<!-- Блочні теги -->
+		<!-- Усі будівельні (div,header,footer,main та інші) -->
+		<!-- Та контентні: h1-h6,p,ul,ol,li -->
+
+		<!--
+		<h1>Заголовок</h1>
+		<a href="#">посилання</a>
+		<p>
+			Lorem ipsum dolor sit amet.
+		</p>
+		  -->
+
+		<!-- Рядкові теги -->
+		<!-- span,mark,a,br -->
+
+		<!-- 
+		<span>Lorem ipsum dolor sit amet.</span>
+		<a href="#">посилання</a>
+		 -->
+
+		<!-- Блочно-рядковий -->
+		<!-- img -->
+
+		<!-- 
+			Ширина блочного тегу завжди займає 
+			ВСЮ ширину батьківського елементу. 
+			Висота формується контентом всередені
+			Блочний тег завжди починається з нового рядка
+		-->
+
+		<!-- 
+			Ширина рядкового 
+			тегу займає ширину по ширині
+			контенту всередені нього.
+			Висота формується контентом всередені
+			Рядковий тег намагається розміститись в рядок
+			разом і іншими рядковими тегами, 
+			блочно-рядковими тегами або текстом
+		 -->
+
+		<!-- 
+			Ширина блочно-рядкового  
+			тегу займає ширину по ширині
+			контенту всередені нього.
+			Висота формується контентом всередені
+			Блочно-рядкового тег намагається розміститись в рядок
+			разом і іншими рядковими тегами, блочно-рядковими тегами або текстом
+		 -->
+
+		<!--  
+			<img src="img/honey.jpg" alt="Image">
+			<span>text</span>
+		-->
+
+		<!-- HTML-вкладеність та конструкції -->
+		<!-- 
+			Загальне правило вкладеності:
+			В більшість рядкових тегів 
+			не можна вкладати блочні теги 
+		-->
+		<!-- Зазвичай вкладеніть виконується так: -->
+		<!-- 
+			будівельні теги -> теги для контенту
+		 -->
+
+		<!-- ВИКЛЮЧЕННЯ -->
+		<!-- 
+			В тег A дозволяється вкладати будівельні теги,
+			якщо цього вимагає макет дизайну
+		 -->
+		<!-- 
+		<a href="#">
+			<div>
+				<p>
+					<span></span>
+				</p>
+			</div>
+		</a>
+		 -->
+
+		<!-- НЕ ВІРНО -->
+		<!-- 
+		<span>
+			<header></header>
+			<div></div>
+			<footer></footer>
+			<h1></h1>
+			<p></p>
+		</span>
+		 -->
+
+		<!-- НЕ ВІРНО (BR) -->
+		<!-- 
+		<main>
+			<div>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+			</div>
+			<br><br><br>
+			<div></div>
+		</main>
+		 -->
+
+		<!-- НЕ ВІРНО (UL) -->
+		<!-- вкладати беспосередньо в списки будь що крім li -->
+		<!-- 
+		<ul>
+			<a href=""></a>
+		</ul>
+		 -->
+		<!-- ВІРНО (UL) -->
+		<!-- 
+		<ul>
+			<li>
+				<a href=""></a>
+			</li>
+		</ul>
+		 -->
+
+		<!-- ЦЕ ВІРНО -->
+		<!-- 
+		<div>
+			<div></div>
+		</div>
+		 -->
+
+		<!-- ЦЕ ВІРНО -->
+		<!-- 
+		<header>
+			<div>
+				<a href="#"></a>
+				<ul>
+					<li></li>
+				</ul>
+				<div></div>
+			</div>
+		</header>
+		<main>
+			<div></div>
+			<a href="#"></a>
+			<p></p>
+			<ul>
+				<li></li>
+			</ul>
+			<div>
+				<a href="#"></a>
+				<p></p>
+			</div>
+		</main>
+		<footer>
+			<div></div>
+			<a href="#"></a>
+			<ul>
+				<li></li>
+			</ul>
+		</footer>
+		 -->
+
+		<!-- Рівні вкладеності -->
+
+		<!-- Нульовий рівень вкладеності -->
+		<header> <!-- Батьківським тегом для тегу DIV -->
+			<!-- 1-й (беспосередній) рівень вкладеності відносно тегу HEADER -->
+			<div>
+				<!-- 2-й рівень вкладеності відносно тегу HEADER -->
+				<!-- 1-й (беспосередній) рівень вкладеності відносно тегу DIV -->
+				<div>
+				</div><!-- Дочірнім тегом для тегу HEADER -->
+			</div><!-- Дочірнім тегом для тегу HEADER -->
+
+			<!-- 1-й (беспосередній) рівень вкладеності відносно тегу HEADER -->
+			<div>
+				<!-- 2-й рівень вкладеності відносно тегу HEADER -->
+				<!-- 1-й (беспосередній) рівень вкладеності відносно тегу DIV -->
+				<p>
+					<!-- 3-й рівень вкладеності відносно тегу HEADER -->
+					<!-- 2-й рівень вкладеності відносно тегу DIV -->
+					<!-- 1-й (беспосередній) рівень вкладеності відносно тегу P -->
+					<a href="#"></a>
+				</p>
+			</div>
+		</header>
+
+		<!-- Конструкції -->
+
+		<!-- Звичайна конструкція шапки сайту -->
+		<!-- 
+		<header>
+			<div>
+				<a href="#"></a>
+				<ul>
+					<li>
+						<a href="#"></a>
+					</li>
+					<li>
+						<a href="#"></a>
+					</li>
+					<li>
+						<a href="#"></a>
+					</li>
+				</ul>
+				<div></div>
+			</div>
+		</header>
+		 -->
+
+		<!-- Звичайна конструкція підвалу сайту -->
+		<!-- 
+		<footer>
+			<div>
+				<a href="#"></a>
+				<ul>
+					<li>
+						<a href="#"></a>
+					</li>
+					<li>
+						<a href="#"></a>
+					</li>
+					<li>
+						<a href="#"></a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="#"></a>
+					</li>
+					<li>
+						<a href="#"></a>
+					</li>
+					<li>
+						<a href="#"></a>
+					</li>
+				</ul>
+				<div></div>
+			</div>
+		</footer>
+		 -->
+
+		<!-- Звичайна конструкція тіла сайту -->
+		<!-- 
+		<main>
+			<div>
+				<h1></h1>
+				<p></p>
+				<p>
+					<a href></a>
+					<span></span>
+					<mark></mark>
+					<br>
+				</p>
+				<p></p>
+				<p></p>
+				<h2></h2>
+				<p></p>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<h2></h2>
+				<p></p>
+				<ol>
+					<li></li>
+				</ol>
+				<h3></h3>
+				<p></p>
+			</div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</main>
+		 -->
+
+		<!-- Конструкція текстової сторінки -->
+		<!-- 
+		<header>
+			<div>
+				<a href="#"></a>
+				<ul>
+					<li>
+						<a href="#"></a>
+					</li>
+					<li>
+						<a href="#"></a>
+					</li>
+					<li>
+						<a href="#"></a>
+					</li>
+				</ul>
+				<div></div>
+			</div>
+		</header>
+		<main>
+			<div>
+				<h1></h1>
+				<p></p>
+				<p>
+					<a href></a>
+					<span></span>
+					<mark></mark>
+					<br>
+				</p>
+				<p></p>
+				<p></p>
+				<h2></h2>
+				<p></p>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<h2></h2>
+				<p></p>
+				<ol>
+					<li></li>
+				</ol>
+				<h3></h3>
+				<p></p>
+			</div>
+		</main>
+		<footer>
+			<div>
+				<a href="#"></a>
+				<ul>
+					<li>
+						<a href="#"></a>
+					</li>
+					<li>
+						<a href="#"></a>
+					</li>
+					<li>
+						<a href="#"></a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="#"></a>
+					</li>
+					<li>
+						<a href="#"></a>
+					</li>
+					<li>
+						<a href="#"></a>
+					</li>
+				</ul>
+				<div></div>
+			</div>
+		</footer>
+		 -->
+
+		<!-- Приклад вкладеності в тег A -->
+		<!-- Обидва посилання ведуть на одну і ту ж сторінку -->
+
+		<!-- 
+		<div>
+			<div>
+				<a href="contacts.html">
+					<img src="img/honey.jpg" alt="Honey">
+				</a>
+			</div>
+			<div>
+				<a href="contacts.html">Text</a>
+			</div>
+		</div>
+		 -->
+
+		<!-- Оптимізований варіант -->
+		<!-- 
+		<a href="contacts.html">
+			<div>
+				<img src="img/honey.jpg" alt="Honey">
+			</div>
+			<div>
+				Text
+			</div>
+		</a>
+		 -->
+
+		<!-- ------------ -->
+		<!-- ЗАБОРОНЄТЬСЯ -->
+		<!-- ------------ -->
+
+		<!-- Вкладати A в A -->
+		<!-- 
+		<a href="#">
+			<a href="#"></a>
+		</a>
+		 -->
+
+		<!-- Залишати порожніми тег P -->
+		<!-- <p></p> -->
+
+		<!-- Залишати порожніми атрибути SRC HREF ALT -->
+		<!-- 
+		<img src alt>
+		<a href></a>
+		-->
+
+		<!-- !!! Не забуваємо про призначення тегів !!! -->
+		<!-- 
+			Використовуємо P для виводу тексту, 
+			A для посилання, 
+			SPAN/MARK для виділення,
+			BR для переводу тексту в новий рядок
+			H1-H6 для заголовків
+		  -->
+
+		<!-- Практичний приклад -->
+		<!-- Сторінка статті -->
+
+		<header>
+			<!-- якась конструкція -->
+			<div>
+				<ul>
+					<li>
+						<a href="#section-1">Розділ №1</a>
+					</li>
+					<li>
+						<a href="#section-2">Розділ №2</a>
+					</li>
+					<li>
+						<a href="contacts.html">Контакти</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<main>
+			<span>
+				<div></div>
+			</span>
+			<div>
+				<h1 id="section-1">Заголовок статті</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro facere est soluta <a target="_blank" href="https://google.com">expedita</a> ab reprehenderit iste itaque maiores nobis amet saepe laboriosam provident, commodi eveniet, doloremque dignissimos tempora mollitia numquam!
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae laudantium possimus voluptate ea sit ex ut nisi est nam sed expedita non maxime quos, sint voluptates pariatur, excepturi voluptatibus dolores?
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae laudantium possimus voluptate ea sit ex ut nisi est nam sed expedita non maxime quos, sint voluptates pariatur, excepturi voluptatibus dolores?
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae laudantium possimus voluptate ea sit ex ut nisi est nam sed expedita non maxime quos, sint voluptates pariatur, excepturi voluptatibus dolores?
+				</p>
+				<ul>
+					<li>Пункт</li>
+					<li>Пункт</li>
+					<li>Пункт</li>
+					<li>Пункт</li>
+					<li>Пункт</li>
+				</ul>
+				<h2 id="section-2">ПідЗаголовок</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro facere est soluta <a target="_blank" href="https://google.com">expedita</a> ab reprehenderit iste itaque maiores nobis amet saepe laboriosam provident, commodi eveniet, doloremque dignissimos tempora mollitia numquam!
+				</p>
+				<img src="img/honey.jpg">
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae laudantium possimus voluptate ea sit ex ut nisi est nam sed expedita non maxime quos, sint voluptates pariatur, excepturi voluptatibus dolores?
+				</p>
+				<!-- і т.д. -->
+			</div>
+		</main>
+		<footer>
+			<!-- якась конструкція -->
+		</footer>
+	</body>
+</html>
